@@ -20,7 +20,7 @@ ui <- dashboardPage(
         /* Make html and body take full height and hide overall overflow */
         html, body {
           height: 100%;
-          overflow: hidden; /* Hide overall scrollbar for the entire page */
+          overflow: auto; /* Hide overall scrollbar for the entire page */
           font-family: 'Tahoma', sans-serif; /* Utilisation d'une police moderne */
           color: #333;
         }
