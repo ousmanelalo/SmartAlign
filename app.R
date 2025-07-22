@@ -182,12 +182,12 @@ ui <- dashboardPage(
               fluidRow(
                 # Boîte pour les résultats textuels
                 box(
-                  title = "Résultats des calculs", status = "primary", solidHeader = TRUE, width = 4,
+                  title = "Résultats des calculs", status = "primary", solidHeader = TRUE, width = 5,
                   verbatimTextOutput("results")
                 ),
                 # Boîte pour la carte
                 box(
-                  title = "Carte des points", status = "primary", solidHeader = TRUE, width = 8,
+                  title = "Carte des points", status = "primary", solidHeader = TRUE, width = 7,
                   leafletOutput("mapPlot")
                 )
               )
