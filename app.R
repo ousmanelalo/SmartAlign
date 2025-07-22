@@ -37,7 +37,7 @@ ui <- dashboardPage(
         .main-sidebar .sidebar {
           height: calc(100vh - 50px); /* Subtract header height */
           overflow-y: auto; /* Enable vertical scrolling */
-          padding-bottom: 20px; /* Add some padding at the bottom for the button */
+          padding-bottom: 0px; /* Add some padding at the bottom for the button */
         }
 
         /* Ensure tab content and tab pane fill available height */
@@ -125,7 +125,7 @@ ui <- dashboardPage(
           color: red;
           border-bottom: 2px solid #e0e0e0;
           padding-bottom: 10px;
-          padding-left: 10px;
+          padding-left: 15px;
           margin-top: 10;
           margin-bottom: 5px;
           font-size: 20px;
