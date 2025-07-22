@@ -151,7 +151,7 @@ ui <- dashboardPage(
           border-radius: 0px;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
           height: 100%; 
-          /* flex-grow: 1; is already on the box-body */
+         
         }
       "))
     ),
