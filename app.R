@@ -250,11 +250,11 @@ server <- function(input, output) {
       "\n",
       sprintf("Distance entre les points: %.2f metres\n", distance_m),
       "\n",
-      sprintf("Azimut de l'antenne A (vers B): %.2f°\n", azimuth_AB),
-      sprintf("Inclinaison (Tilt) de l'antenne A: %.2f°\n", tilt_A_deg),
+      sprintf("Azimut de l'antenne A (vers B): %.2f degres\n", azimuth_AB),
+      sprintf("Inclinaison (Tilt) de l'antenne A: %.2f degres\n", tilt_A_deg),
       "\n",
-      sprintf("Azimut de l'antenne B (vers A): %.2f°\n", azimuth_BA),
-      sprintf("Inclinaison (Tilt) de l'antenne B: %.2f°\n", tilt_B_deg),
+      sprintf("Azimut de l'antenne B (vers A): %.2f degres\n", azimuth_BA),
+      sprintf("Inclinaison (Tilt) de l'antenne B: %.2f degres\n", tilt_B_deg),
       sep = ""
     )
     
