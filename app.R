@@ -157,18 +157,18 @@ ui <- dashboardPage(
     ),
     # Menu de la barre latérale (peut être utilisé pour la navigation si l'app grandit)
     sidebarMenu(
-      menuItem("Paramètres", tabName = "settings", icon = icon("gears")),
+      menuItem("Parametres", tabName = "settings", icon = icon("gears")),
       # Inputs pour le Point A
       h4("Site A"),
       numericInput("lonA", "Longitude (degrés)", value = 2.12, min = -180, max = 180, step = 0.000001),
       numericInput("latA", "Latitude (degrés)", value = 13.51, min = -90, max = 90, step = 0.000001),
-      numericInput("altA", "Altitude (mètres)", value = 200, min = 0),
+      numericInput("altA", "Altitude (metres)", value = 200, min = 0),
       
       # Inputs pour le Point B
       h4("Site B"),
       numericInput("lonB", "Longitude (degrés)", value = 2.15, min = -180, max = 180, step = 0.000001),
       numericInput("latB", "Latitude (degrés)", value = 13.52, min = -90, max = 90, step = 0.000001),
-      numericInput("altB", "Altitude (mètres)", value = 250, min = 0),
+      numericInput("altB", "Altitude (metres)", value = 250, min = 0),
       
       # Bouton de calcul
       actionButton("calculate", "Calculer")
@@ -201,7 +201,7 @@ server <- function(input, output) {
   
   # Créer un reactiveValues pour stocker les résultats et l'état de la carte
   rv <- reactiveValues(
-    results_text = "Cliquez sur 'Calculer' pour voir les résultats.",
+    results_text = "Cliquez sur 'Calculer' pour voir les resultats.",
     map_data = NULL # Sera initialisé avec une carte par défaut
   )
   
@@ -245,16 +245,16 @@ server <- function(input, output) {
     # Mettre à jour le texte des résultats
     rv$results_text <- paste(
       "------------------\n",
-      sprintf("Coordonnées Point A: Longitude %.6f, Latitude %.6f, Altitude %.2f m\n", lonA, latA, altA),
-      sprintf("Coordonnées Point B: Longitude %.6f, Latitude %.6f, Altitude %.2f m\n", lonB, latB, altB),
+      sprintf("Coordonnees Point A: Longitude %.6f, Latitude %.6f, Altitude %.2f m\n", lonA, latA, altA),
+      sprintf("Coordonnees Point B: Longitude %.6f, Latitude %.6f, Altitude %.2f m\n", lonB, latB, altB),
       "\n",
-      sprintf("Distance entre les points: %.2f mètres\n", distance_m),
+      sprintf("Distance entre les points: %.2f metres\n", distance_m),
       "\n",
-      sprintf("Azimut de l'antenne A (vers B): %.2f degrés\n", azimuth_AB),
-      sprintf("Inclinaison (Tilt) de l'antenne A: %.2f degrés\n", tilt_A_deg),
+      sprintf("Azimut de l'antenne A (vers B): %.2f°\n", azimuth_AB),
+      sprintf("Inclinaison (Tilt) de l'antenne A: %.2f°\n", tilt_A_deg),
       "\n",
-      sprintf("Azimut de l'antenne B (vers A): %.2f degrés\n", azimuth_BA),
-      sprintf("Inclinaison (Tilt) de l'antenne B: %.2f degrés\n", tilt_B_deg),
+      sprintf("Azimut de l'antenne B (vers A): %.2f°\n", azimuth_BA),
+      sprintf("Inclinaison (Tilt) de l'antenne B: %.2f°\n", tilt_B_deg),
       sep = ""
     )
     
